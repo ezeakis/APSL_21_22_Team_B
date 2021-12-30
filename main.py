@@ -9,6 +9,7 @@ from time import sleep
 
 sense = SenseHat()
 
+#This command sets the path where the file will be stored.
 base_folder = Path(__file__).parent.resolve()
 data_file = base_folder/'data.csv'
 
