@@ -20,4 +20,5 @@ with open(data_file, 'w', buffering=1) as f:
     for i in range(10):
         row = (datetime.now(), sense.temperature, sense.humidity, sense.pressure)
         writer.writerow(row)
-        sleep(60)
+        sense.show_message(datetime.now())
+        sleep(30)
