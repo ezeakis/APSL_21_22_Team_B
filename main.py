@@ -22,7 +22,7 @@ with open(data_file, 'w', buffering=1) as f:
     writer.writerow(header)
     #It will run 300 times which is less than three hours
     for i in range(300):
-        row = (datetime.now(), sense.temperature, sense.humidity, sense.pressure)
+        row = (datetime.now(), round(sense.temperature), round(sense.humidity), round(sense.pressure))
         writer.writerow(row)
         sense.show_message(str(i))
         sleep(30)
