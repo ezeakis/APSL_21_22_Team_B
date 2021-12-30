@@ -24,6 +24,7 @@ with open(data_file, 'w', buffering=1) as f:
     for i in range(300):
         row = (datetime.now(), round(sense.temperature), round(sense.humidity), round(sense.pressure))
         writer.writerow(row)
+        #This is to show message on the display, it is part of the rules for a "Life in Space" experiment.
         sense.show_message(str(i))
         sleep(30)
 
